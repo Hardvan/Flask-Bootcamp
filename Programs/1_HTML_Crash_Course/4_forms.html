@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+
+  <body>
+    <!--? for attribute in label should match with id attribute in input -->
+
+    <form action="https://www.google.com/" method="get">
+      <h1>Log In</h1>
+      <h2>Enter your email and passowrd</h2>
+      <!-- Email -->
+      <label for="emailtag">Email:</label>
+      <input
+        type="email"
+        id="emailtag"
+        name="useremail"
+        placeholder="Email Here"
+      />
+
+      <!-- Password -->
+      <label for="passtag">Password:</label>
+      <input
+        type="password"
+        id="passtag"
+        name="userpass"
+        placeholder="Password Here"
+      />
+
+      <!-- <input type="color" name="" value="" /> Just for Fun -->
+
+      <!-- Submit Button -->
+      <input type="submit" name="" value="Submit" />
+    </form>
+
+    <h1>Form Selections</h1>
+    <form method="get">
+      <!-- 
+            1) Linking Radio Buttons
+            2) Drop-Down Meni
+            3) Text Area Inputs
+        -->
+
+      <!--* Radio Buttons -->
+      <!--? Same "name" for related radio buttons -->
+      <h3>Do you already own a dog?</h3>
+      <label for="yes">Yes:</label>
+      <input type="radio" id="yes" name="dog_choice" value="yes" />
+
+      <label for="no">No:</label>
+      <input type="radio" id="no" name="dog_choice" value="no" />
+
+      <!--* Drop-Down Menu -->
+      <h3>What is your favoruite dog breed?</h3>
+      <select name="breeds">
+        <option value="lab">Labrador</option>
+        <option value="pug">German Shepherd</option>
+        <option value="poodle">Pug</option>
+      </select>
+
+      <!--* Text Area Input -->
+      <label for="text_area">Tell us about your dog:</label>
+      <textarea name="text_area" id="" cols="30" rows="10"></textarea>
+
+      <input type="submit" name="" value="Submit Feedback" />
+    </form>
+  </body>
+</html>
