@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block content %} <br />
+This is the puppy page for: {{ name }} <br />
+This is the puppy page for: {{ name.capitalize() }} <br />
+{# Filter #} This is the puppy page for: {{ name|capitalize }} <br />
+{# url_for for #}
+<a href="{{url_for('static', filename='img1.jpg')}}">Click Here</a>
+
+{% endblock content %}

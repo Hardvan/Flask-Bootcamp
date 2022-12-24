@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Simple Loops</h1>
+    <ul>
+      {% for i in nums %}
+      <li>{{ i }}</li>
+      {% endfor %}
+    </ul>
+    <ul>
+      {% for name in names %}
+      <li>{{ name.upper() }}</li>
+      {% endfor %}
+    </ul>
+
+    <h1>if else statements</h1>
+    {% if "Bob" in names %}
+    <p>Found you Bob!</p>
+    {% else %}
+    <p>Bob is not here.</p>
+    {% endif %}
+  </body>
+</html>
