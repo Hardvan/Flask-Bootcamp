@@ -24,6 +24,7 @@ db = SQLAlchemy(app)
 
 Migrate(app, db)  # Connects the app to the database
 
+# * Command Line Commands for Flask Migrate
 # ? Type flask db init in the terminal to create the migrations folder
 # ? Type flask db migrate -m "Initial migration" in the terminal to create the migration file
 # ? Type flask db upgrade in the terminal to create the database
