@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate  # Used to migrate the database
 
 # ? Type set FLASK_APP=app.py in the terminal to set the environment variable
+# ? If it doesn't work, type $env:FLASK_APP = "app.py" in the terminal
 
 # ? 2) get the path of the current file
 base_dir = os.path.abspath(os.path.dirname(__file__))
