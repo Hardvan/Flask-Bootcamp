@@ -1,15 +1,16 @@
 from app import db, Puppy, app
 
 with app.app_context():
+
     # ? Create all the tables
     db.create_all()
 
     # ? Add the objects to the database
-    sam = Puppy("Bob", 3)
-    frank = Puppy("Charlie", 4)
+    sam = Puppy("Bob", 3, "Labrador")
+    frank = Puppy("Charlie", 4, "Poodle")
 
-    print(sam.id)  # None
-    print(frank.id)  # None
+    print(f"Sam's ID: {sam.id}")  # Sam's ID: None
+    print(f"Frank's ID: {frank.id}")  # Frank's ID: None
 
     db.session.add_all([sam, frank])
     # OR
@@ -19,5 +20,5 @@ with app.app_context():
     # ? Commit the changes
     db.session.commit()
 
-    print(sam.id)  # 1
-    print(frank.id)  # 2
+    print(f"Sam's ID: {sam.id}")  # Sam's ID: {sam.id}
+    print(f"Frank's ID: {frank.id}")  # Frank's ID: {frank.id}

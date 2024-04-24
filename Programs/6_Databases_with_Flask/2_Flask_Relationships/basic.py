@@ -13,10 +13,11 @@ with app.app_context():
     db.session.commit()
 
     # Check
-    print(Puppy.query.all())
+    puppies = Puppy.query.all()
+    print(f"All puppies: {puppies}")
 
     bob = Puppy.query.filter_by(name="Bob").first()
-    print(bob)
+    print(f"Bob: {bob}")
 
     # Create Owner Object
     hardvan = Owner(name="Hardvan", puppy_id=bob.id)
@@ -30,6 +31,6 @@ with app.app_context():
 
     # Grab Bob
     bob = Puppy.query.filter_by(name="Bob").first()
-    print(bob)
+    print(f"Bob: {bob}")
 
-    print(bob.report_toys())
+    print(f"{bob.report_toys()}")

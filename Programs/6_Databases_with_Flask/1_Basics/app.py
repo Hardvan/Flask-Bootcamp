@@ -6,29 +6,25 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate  # Used to migrate the database
 
 # ? Type set FLASK_APP=app.py in the terminal to set the environment variable
-# ? If it doesn't work, type $env:FLASK_APP = "app.py" in the terminal
+# ? If it doesn't work, type $env:FLASK_APP="app.py" in the terminal
 
 # ? 2) get the path of the current file
-base_dir = os.path.abspath(os.path.dirname(__file__))
-# __file__ ---> app.py
-print(base_dir)
+base_dir = os.path.abspath(os.path.dirname(__file__))  # __file__ ---> app.py
+print(f"Base directory: {base_dir}")
 
 app = Flask(__name__)
 
 # ? 3) Connecting to the database
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + \
     os.path.join(base_dir, "data.sqlite")
-
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-
 db = SQLAlchemy(app)
-
 Migrate(app, db)  # Connects the app to the database
 
-# * Command Line Commands for Flask Migrate
-# ? Type flask db init in the terminal to create the migrations folder
-# ? Type flask db migrate -m "Initial migration" in the terminal to create the migration file
-# ? Type flask db upgrade in the terminal to create the database
+# * Terminal Commands for Flask Migrate
+# ? `flask db init`: create the migrations folder
+# ? `flask db migrate -m "Initial migration"`: create the migration file
+# ? `flask db upgrade`: create the database
 
 
 # ? 4) Creating a model
@@ -43,6 +39,7 @@ class Puppy(db.Model):
     age = db.Column(db.Integer)
     breed = db.Column(db.Text)
 
+    # Constructor
     def __init__(self, name, age, breed):
         self.name = name
         self.age = age
