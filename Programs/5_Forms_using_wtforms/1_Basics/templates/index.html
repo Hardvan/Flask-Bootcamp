@@ -1,10 +1,14 @@
-<p>
-  {% if breed %} The breed you entered is {{ breed }} <br />
+<h2>
+  {% if breed %} The breed you entered is: {{ breed }} <br />
   Update it in the form below: {% else %} Please enter your dog's breed: {%
   endif %}
-</p>
+</h2>
 
-{# POST can also be post #}
+<!-- POST can also be post -->
+<!-- form.hidden_tag() is used to prevent CSRF attacks -->
+<!-- form.breed.label is used to display the label -->
+<!-- form.breed() is used to display the input field -->
+<!-- form.submit() is used to display the submit button -->
 <form method="POST">
   {{ form.hidden_tag() }} {{form.breed.label}}{{form.breed()}} {{form.submit()}}
 </form>

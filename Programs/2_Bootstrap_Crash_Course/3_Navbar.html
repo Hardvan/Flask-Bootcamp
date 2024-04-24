@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buttons & Bootstrap</title>
+
     <!-- Bootstrap Link (to be added before other stylesheet links) -->
     <!-- CSS only -->
     <link
@@ -13,7 +14,6 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-
     <!-- Bootstrap JS -->
     <!-- JavaScript Bundle with Popper -->
     <script
@@ -26,6 +26,7 @@
   <body>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
       <div class="container-fluid">
+        <!-- Navbar Brand -->
         <a class="navbar-brand" href="#">Navbar</a>
         <button
           class="navbar-toggler"
@@ -38,14 +39,18 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Home -->
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
+            <!-- Link -->
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li>
+            <!-- Dropdown -->
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -65,10 +70,12 @@
                 </li>
               </ul>
             </li>
+            <!-- Disabled -->
             <li class="nav-item">
               <a class="nav-link disabled">Disabled</a>
             </li>
           </ul>
+          <!-- Search Form -->
           <form class="d-flex" role="search">
             <input
               class="form-control me-2"

@@ -10,6 +10,7 @@ def index():
 
 @app.route("/dog/<name>")
 def dog(name):
+    # IndexError: string index out of range
     return f"<h1>{name[1000]}'s Page</h1>"
 
 

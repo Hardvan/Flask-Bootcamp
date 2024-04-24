@@ -1,7 +1,7 @@
 
-# ? 1) Create a folder named templates in the same directory as the python file
-# ? 2) Create a file named basic.html in the templates folder
-# ? 3) Import render_template function to render html files
+# ? 1) Create a folder named 'templates' in the same directory as the python file
+# ? 2) Create a file named 'basic.html' in the templates folder
+# ? 3) Import 'render_template' function to render html files
 
 from flask import Flask, render_template
 

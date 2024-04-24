@@ -1,5 +1,8 @@
-{% extends "base.html" %} {% block content %} <br />
-This is the puppy page for: {{ name }} <br />
-This is the puppy page for: {{ name.capitalize() }} <br />
-{# Filter #} This is the puppy page for: {{ name|capitalize }} {% endblock
-content %}
+{% extends "base.html" %}
+
+<!-- Content Block -->
+{% block content %} <br />
+Puppy name: {{ name }} <br />
+Capitalized name: {{ name.capitalize() }} <br />
+<!-- Filter -->
+Alternate way to capitalize name: {{ name|capitalize }} {% endblock content %}

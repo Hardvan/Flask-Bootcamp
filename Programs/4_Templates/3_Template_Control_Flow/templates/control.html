@@ -8,18 +8,22 @@
   </head>
 
   <body>
+    <!-- Simple Loops -->
     <h1>Simple Loops</h1>
+    <h2>Numbers</h2>
     <ul>
       {% for i in nums %}
       <li>{{ i }}</li>
       {% endfor %}
     </ul>
+    <h2>Names</h2>
     <ul>
       {% for name in names %}
       <li>{{ name.upper() }}</li>
       {% endfor %}
     </ul>
 
+    <!-- if else statements -->
     <h1>if else statements</h1>
     {% if "Bob" in names %}
     <p>Found you Bob!</p>

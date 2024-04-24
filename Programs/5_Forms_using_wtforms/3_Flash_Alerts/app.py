@@ -1,4 +1,4 @@
-from flask import Flask, render_template, flash, session, redirect, url_for
+from flask import Flask, render_template, flash, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
@@ -8,7 +8,6 @@ app.config["SECRET_KEY"] = "verysecretkey"
 
 
 class SimpleForm(FlaskForm):
-
     submit = SubmitField("Click Me")
 
 
@@ -18,7 +17,6 @@ def index():
     form = SimpleForm()
     if form.validate_on_submit():
         flash("Form was submitted successfully!")  # ? Flash Alert
-
         return redirect(url_for("index"))
 
     return render_template("index.html", form=form)

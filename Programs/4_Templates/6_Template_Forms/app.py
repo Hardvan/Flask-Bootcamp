@@ -15,6 +15,8 @@ def signup_form():
 
 @app.route("/thankyou")
 def thank_you():
+
+    # Get the first and last name from the form
     first = request.args.get("first")
     last = request.args.get("last")
 
@@ -22,6 +24,7 @@ def thank_you():
 
 
 # ? Error Handling
+# errorhandler is a decorator that takes an error code as an argument
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("404.html"), 404

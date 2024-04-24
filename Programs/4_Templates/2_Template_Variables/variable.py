@@ -8,7 +8,10 @@ def index():
 
     name = "Hardvan"
     letters = list(name)
-    puppy_dictionary = {"name": "Bobo", "age": 3, "color": "brown"}
+    puppy_dictionary = {"name": "Bobo",
+                        "age": 3,
+                        "color": "brown"}
+
     # ? Pass the variables to the template
     return render_template("variable.html", var=name, lst=letters, diction=puppy_dictionary)
 

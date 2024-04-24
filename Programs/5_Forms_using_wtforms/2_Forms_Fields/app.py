@@ -36,7 +36,6 @@ def index():
     if form.validate_on_submit():
 
         # ? Session is a dictionary that stores data for the user across different requests
-
         session["breed"] = form.breed.data
         session["neutered"] = form.neutered.data
         session["mood"] = form.mood.data

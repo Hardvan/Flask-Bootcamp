@@ -1,8 +1,12 @@
-{% extends "base.html" %} {% block content %} <br />
-This is the puppy page for: {{ name }} <br />
-This is the puppy page for: {{ name.capitalize() }} <br />
-{# Filter #} This is the puppy page for: {{ name|capitalize }} <br />
-{# url_for for #}
+{% extends "base.html" %}
+
+<!-- Content Block -->
+{% block content %} <br />
+Puppy name: {{ name }} <br />
+Capitalized name: {{ name.capitalize() }} <br />
+Alternate way to capitalize name: {{ name|capitalize }} <br />
+
+<!-- url_for to link to an image -->
 <a href="{{url_for('static', filename='img1.jpg')}}">Click Here</a>
 
 {% endblock content %}
