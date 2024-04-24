@@ -2,8 +2,8 @@
 
 ## Structure
 
-| #   | Component                                                      |
-| --- | -------------------------------------------------------------- |
+|  #  | Topic                                                          |
+| :-: | -------------------------------------------------------------- |
 | 1.  | [HTML Crash Course](./Programs/1_HTML_Crash_Course/)           |
 | 2.  | [Bootstrap Crash Course](./Programs/2_Bootstrap_Crash_Course/) |
 | 3.  | [Flask Basics](./Programs/3_Flask_Basics/)                     |
